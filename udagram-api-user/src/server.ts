@@ -15,7 +15,7 @@ const c = config;
   await sequelize.sync();
 
   const app = express();
-  const port = process.env.PORT || 8080;
+  const port = process.env.PORT || 8081;
 
   app.use(bodyParser.json());
 
@@ -35,7 +35,7 @@ const c = config;
 
   // Start the Server
   app.listen( port, () => {
-      console.log( `server running ` + c.url );
+      console.log( `server running ` + port );
       console.log( `press CTRL+C to stop server` );
   } );
 })();
