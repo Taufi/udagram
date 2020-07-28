@@ -1,23 +1,18 @@
-FROM beevelop/ionic AS ionic
- 
-# Install prerequisites 
-# (if I want to use the curl command)
-# RUN apt-get update && apt-get install -y curl
-# CMD /bin/bash
-
+## Build
+FROM beevelop/ionic:latest AS ionic
+# Create app directory
 WORKDIR /usr/src/app
- 
+# Install app dependencies
+# A wildcard is used to ensure both package.json AND package-lock.json are copied
+# where available (npm@5+)
+COPY package*.json ./
+RUN npm ci
+# Bundle app source
 COPY . .
- 
-RUN npm install
+RUN ionic build
 
-# so that ng can run without error
-RUN npm install -g @angular/cli@7.3.9
+## Run 
+FROM nginx:alpine
+#COPY www /usr/share/nginx/html
+COPY --from=ionic  /usr/src/app/www /usr/share/nginx/html
 
-#after npm install I obviously have to reload node-sass - otherwise there is an error
-RUN npm rebuild node-sass
- 
-EXPOSE 8100
-
-CMD [ "ionic", "serve"] 
-# CMD [ "ionic", "serve", "--no-open"]
