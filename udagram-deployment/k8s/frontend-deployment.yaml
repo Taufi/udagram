@@ -1,11 +1,15 @@
-apiVersion: extensions/v1beta1
+apiVersion: apps/v1
+# apiVersion: extensions/v1beta1
 kind: Deployment
 metadata:
   labels:
-    service: frontend
+    app: frontend
   name: frontend
 spec:
-  replicas: 2
+  replicas: 1
+  selector:
+    matchLabels:
+       service: frontend
   template:
     metadata:
       labels:
@@ -13,7 +17,7 @@ spec:
         api: external        
     spec:
       containers:
-      - image: udagram-frontend:local
+      - image: taufi/udagram-frontend
         name: frontend
         imagePullPolicy: Always          
         ports:

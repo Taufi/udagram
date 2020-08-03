@@ -3,16 +3,17 @@ services:
   reverseproxy:
     build:
       context: .
-    image: reverseproxy
+    image: taufi/reverseproxy
   backend_user:
     build:
       context: ../../udagram-api-user
-    image: udagram-api-user
+    image: taufi/udagram-api-user
   backend_feed:
     build:
       context: ../../udagram-api-feed
-    image: udagram-api-feed
+    image: taufi/udagram-api-feed
   frontend:
     build:
       context: ../../udagram-frontend
-    image: udagram-frontend:local
+    image: taufi/udagram-frontend
+    # image: taufi/udagram-frontend:local

@@ -1,13 +1,13 @@
 apiVersion: v1
 kind: ConfigMap
 data:
-  AWS_BUCKET: ___INSERT_AWS_BUCKET___
-  AWS_PROFILE: ___INSERT_AWS_PROFILE___
-  AWS_REGION: ___INSERT_AWS_REGION___
-  JWT_SECRET: ___INSERT_JWT_SECRET___
-  POSTGRES_DB: ___INSERT_POSTGRES_DB___
-  POSTGRES_HOST: ___INSERT_POSTGRES_HOST___
-  URL: http://localhost:8100  
+  AWS_BUCKET: udagram-taufi-dev
+  AWS_PROFILE: default
+  AWS_REGION: us-east-2
+  JWT_SECRET: helloworld
+  POSTGRES_DB: udagramtaufidev
+  POSTGRES_HOST: udagramtaufidev.c6wufgadkz2i.us-east-2.rds.amazonaws.com
+  URL: http://a1b30e2cd89d84a4e9948a12c01268d9-926686975.us-east-2.elb.amazonaws.com:8100
 metadata:
   name: env-config
   

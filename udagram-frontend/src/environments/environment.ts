@@ -5,7 +5,7 @@
 export const environment = {
   production: false,
   appName: 'Taufigram',
-  apiHost: 'http://localhost:8080/api/v0'
+  apiHost: 'http://a36c9a05cabc2408fab9a0c7fd5c5350-354710475.us-east-2.elb.amazonaws.com:8080/api/v0'
 };
 
 /*
