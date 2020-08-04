@@ -5,7 +5,8 @@
 export const environment = {
   production: false,
   appName: 'Taufigram',
-  apiHost: 'http://a36c9a05cabc2408fab9a0c7fd5c5350-354710475.us-east-2.elb.amazonaws.com:8080/api/v0'
+  apiHost: 'http://a93d8dbbe17f2409bba24b0d8748d951-211555128.us-east-2.elb.amazonaws.com:8080/api/v0'
+  //KD 200803 http:// ENORM WICHTIG, sonst CORS-Fehler
 };
 
 /*

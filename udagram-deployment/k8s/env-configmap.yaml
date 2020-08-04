@@ -7,7 +7,6 @@ data:
   JWT_SECRET: helloworld
   POSTGRES_DB: udagramtaufidev
   POSTGRES_HOST: udagramtaufidev.c6wufgadkz2i.us-east-2.rds.amazonaws.com
-  URL: http://a1b30e2cd89d84a4e9948a12c01268d9-926686975.us-east-2.elb.amazonaws.com:8100
+  URL: http://aa2c29e3093344461874450df2ef8b15-2080546950.us-east-2.elb.amazonaws.com:8100
 metadata:
   name: env-config
-  

@@ -36,6 +36,5 @@ services:
       URL: "http://localhost:8100"
   frontend:
     image: taufi/udagram-frontend
-    # image: udagram-frontend:local
     ports:
       - "8100:80"
